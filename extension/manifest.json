@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Site Analyser",
+    "version": "2.1",
+    "description": "Developed by S Adityan, P V Yathin Sai Ramana, and Yesh Dev Shivhare. This extension helps analyze website safety.",
+    "permissions": ["tabs", "activeTab", "storage", "notifications"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "options_page": "reported.html"
+}

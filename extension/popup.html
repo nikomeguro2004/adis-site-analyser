@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Site Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 350px;
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            border-radius: 10px;
+        }
+
+        #headerContainer {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        #headerImage {
+            width: 90%;
+            height: auto;
+            max-height: 80px;  /* ✅ Larger but still fits */
+            border-radius: 5px;
+            object-fit: contain;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        #riskImage {
+            width: 70px;
+            height: 70px;
+            display: none;
+            margin: 8px auto;
+        }
+
+        #result {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #ff3b3b;
+            border: none;
+            padding: 8px;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 80%;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e60000;
+        }
+
+        .footer {
+            font-size: 10px;
+            color: #bbb;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="headerContainer">
+        <img id="headerImage" src="" alt="Site Analyzer Header">
+    </div>
+    <h2>Website Security Analyzer</h2>
+    <div id="result">Analyzing...</div>
+    <img id="riskImage" src="" alt="Risk Level">
+    <button id="checkBtn">Scan Again</button>
+    <button id="reportBtn">Report Phishing</button>
+    <button id="viewReportedSites">View Reported Sites</button>
+    <div class="footer">Developed by S Adityan, P V Yathin Sai Ramana, and Yesh Dev Shivhare</div>
+    <script src="popup.js"></script>
+</body>
+</html>

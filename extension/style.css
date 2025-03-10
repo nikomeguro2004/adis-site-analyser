@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  width: 360px;
+  padding: 15px;
+  border-radius: 8px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Main Container */
+.container {
+  background: #262626;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+/* Extension Icon */
+.extension-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+/* Titles */
+h1 {
+  font-size: 20px;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 13px;
+  color: #b0b0b0;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* URL Box */
+.url-box {
+  background: #333333;
+  padding: 8px;
+  border-radius: 6px;
+  max-width: 85%;
+  word-wrap: break-word;
+  font-size: 12px;
+}
+
+/* Buttons */
+button {
+  background: #444444;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #555555;
+  transform: scale(1.05);
+}
+
+/* Report Phishing Button */
+#reportBtn {
+  background: #bb0000;
+  margin-top: 8px;
+}
+
+#reportBtn:hover {
+  background: #990000;
+}
+
+/* Security Info */
+#security-info {
+  background: #3a3a3a;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* Risk Level Images */
+.risk-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 8px;
+  display: none;
+}
+
+/* Settings Section */
+#settings {
+  background: #3a3a3a;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  font-size: 11px;
+  margin-top: 12px;
+  color: #999999;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0px); opacity: 1; }
+}
