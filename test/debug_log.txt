@@ -1,0 +1,246 @@
+Received Request: url=chrome%3A%2F%2Fnewtab%2F
+Parsed POST Data: Array
+(
+    [url] => chrome://newtab/
+)
+
+Received Request: url=chrome%3A%2F%2Fnewtab%2F
+Parsed POST Data: Array
+(
+    [url] => chrome://newtab/
+)
+
+Received Request: url=https://chatgpt.com
+Parsed POST Data: Array
+(
+    [url] => https://chatgpt.com
+)
+
+Received Request: url=https://tinywow.com
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com
+)
+
+Received Request: url=chrome%3A%2F%2Fextensions%2F
+Parsed POST Data: Array
+(
+    [url] => chrome://extensions/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com
+)
+
+Received Request: url=https%3A%2F%2Fchatgpt.com%2Fc%2F67c985df-67d4-8013-a337-c942983928b7
+Parsed POST Data: Array
+(
+    [url] => https://chatgpt.com/c/67c985df-67d4-8013-a337-c942983928b7
+)
+
+Received Request: url=https%3A%2F%2Fchatgpt.com%2Fc%2F67c985df-67d4-8013-a337-c942983928b7
+Parsed POST Data: Array
+(
+    [url] => https://chatgpt.com/c/67c985df-67d4-8013-a337-c942983928b7
+)
+
+Received Request: url=https%3A%2F%2Fchatgpt.com%2Fc%2F67c985df-67d4-8013-a337-c942983928b7
+Parsed POST Data: Array
+(
+    [url] => https://chatgpt.com/c/67c985df-67d4-8013-a337-c942983928b7
+)
+
+Received Request: url=https%3A%2F%2Fchatgpt.com%2Fc%2F67c985df-67d4-8013-a337-c942983928b7
+Parsed POST Data: Array
+(
+    [url] => https://chatgpt.com/c/67c985df-67d4-8013-a337-c942983928b7
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=http%3A%2F%2Fnceg.uop.edu.pk%2Fnceglibrary%2Fajax%2Fadmin.php%3Fajax%3Dyes
+Parsed POST Data: Array
+(
+    [url] => http://nceg.uop.edu.pk/nceglibrary/ajax/admin.php?ajax=yes
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=chrome%3A%2F%2Fnewtab%2F
+Parsed POST Data: Array
+(
+    [url] => chrome://newtab/
+)
+
+Received Request: url=http://nceg.uop.edu.pk/nceglibrary/ajax/admin.php?ajax=yes
+Parsed POST Data: Array
+(
+    [url] => http://nceg.uop.edu.pk/nceglibrary/ajax/admin.php?ajax=yes
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=http://nceg.uop.edu.pk
+Parsed POST Data: Array
+(
+    [url] => http://nceg.uop.edu.pk
+)
+
+Received Request: url=http%3A%2F%2Fnceg.uop.edu.pk%2Fnceglibrary%2Fajax%2Fadmin.php%3Fajax%3Dyes
+Parsed POST Data: Array
+(
+    [url] => http://nceg.uop.edu.pk/nceglibrary/ajax/admin.php?ajax=yes
+)
+
+Received Request: url=http%3A%2F%2Fnceg.uop.edu.pk%2Fnceglibrary%2Fajax%2Fadmin.php%3Fajax%3Dyes
+Parsed POST Data: Array
+(
+    [url] => http://nceg.uop.edu.pk/nceglibrary/ajax/admin.php?ajax=yes
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=chrome%3A%2F%2Fextensions%2F
+Parsed POST Data: Array
+(
+    [url] => chrome://extensions/
+)
+
+Received Request: url=https%3A%2F%2Ftinywow.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://tinywow.com/
+)
+
+Received Request: url=https%3A%2F%2F17ebook.co.cutestat.com%2F
+Parsed POST Data: Array
+(
+    [url] => https://17ebook.co.cutestat.com/
+)
+
