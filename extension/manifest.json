@@ -3,16 +3,24 @@
     "name": "Site Analyser",
     "version": "2.1",
     "description": "This extension helps analyze website safety.",
-    "permissions": ["tabs", "activeTab", "storage", "notifications"],
+    "permissions": ["tabs", "activeTab", "storage", "notifications", "webRequest",
+    "webRequestBlocking", "<all_urls>"],
     "background": {
         "service_worker": "background.js"
     },
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "icon.png"
+        "default_icon": {
+            "16": "icon01.png",
+            "48": "icon01.png",
+            "128": "icon01.png"
+        }
     },
-    "icons": {
-        "128": "icon.png"
-    },
+    "web_accessible_resources": [
+        {
+            "resources": ["icon01.png", "icon02.png", "icon03.png", "icon04.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
     "options_page": "reported.html"
 }

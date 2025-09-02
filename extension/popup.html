@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Site Analyzer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             width: 350px;
-            padding: 15px;
+            padding: 2px;
             text-align: center;
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            background: linear-gradient(135deg, #5463ff, #5463ff);
             color: white;
-            border-radius: 10px;
+            border-radius: 6px;
         }
 
         #headerContainer {
@@ -45,7 +47,7 @@
         }
 
         button {
-            background: #ff3b3b;
+            background: #9aa5f9;
             border: none;
             padding: 8px;
             color: white;
@@ -58,7 +60,7 @@
         }
 
         button:hover {
-            background: #e60000;
+            background: #9aa5f9;
         }
 
         .footer {
@@ -69,16 +71,15 @@
     </style>
 </head>
 <body>
-    <div id="headerContainer">
-        <img id="headerImage" src="" alt="Site Analyzer Header">
+    <div class="container">
+        <img id="header-icon" class="header-icon" src="icon04.png" alt="Website Security Analyzer logo">
+        <h1>Website Security Analyzer</h1>
+        <div id="security-info" class="ready">Analyzing...</div>
+        <img class="risk-icon" id="risk" alt="Risk status icon">
+        <button id="scan-again" aria-label="Scan website for safety">Scan Again</button>
+        <button id="reportBtn" aria-label="Report website as phishing">Report Phishing</button>
+        <button id="viewReportedSites" aria-label="View reported phishing sites">View Reported Sites</button>
     </div>
-    <h2>Website Security Analyzer</h2>
-    <div id="result">Analyzing...</div>
-    <img id="riskImage" src="" alt="Risk Level">
-    <button id="checkBtn">Scan Again</button>
-    <button id="reportBtn">Report Phishing</button>
-    <button id="viewReportedSites">View Reported Sites</button>
-    <div class="footer">Developed by S Adityan, P V Yathin Sai Ramana, and Yesh Dev Shivhare</div>
     <script src="popup.js"></script>
 </body>
 </html>
