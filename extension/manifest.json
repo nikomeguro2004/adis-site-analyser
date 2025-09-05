@@ -11,14 +11,14 @@
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "icon01.png",
-            "48": "icon01.png",
-            "128": "icon01.png"
+            "16": "Secure.png",
+            "48": "Secure.png",
+            "128": "Secure.png"
         }
     },
     "web_accessible_resources": [
         {
-            "resources": ["icon01.png", "icon02.png", "icon03.png", "icon04.png"],
+            "resources": ["Secure.png", "Warning.png", "Danger.png"],
             "matches": ["<all_urls>"]
         }
     ],

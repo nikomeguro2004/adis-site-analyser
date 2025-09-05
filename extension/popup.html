@@ -2,30 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Site Analyzer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: 350px;
-            padding: 2px;
+            width: 320px;
+            padding: 0px;
             text-align: center;
-            background: linear-gradient(135deg, #5463ff, #5463ff);
+            background: linear-gradient(135deg, #fbfbfc, #fcfcfd);
             color: white;
-            border-radius: 6px;
+            border-radius: 0px;
         }
 
         #headerContainer {
             width: 100%;
-            margin-bottom: 8px;
-        }
-
-        #headerImage {
-            width: 90%;
-            height: auto;
-            max-height: 80px;  /* ✅ Larger but still fits */
-            border-radius: 5px;
-            object-fit: contain;
+            margin-bottom: 15px;
         }
 
         h2 {
@@ -63,16 +56,10 @@
             background: #9aa5f9;
         }
 
-        .footer {
-            font-size: 10px;
-            color: #bbb;
-            margin-top: 8px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img id="header-icon" class="header-icon" src="icon04.png" alt="Website Security Analyzer logo">
         <h1>Website Security Analyzer</h1>
         <div id="security-info" class="ready">Analyzing...</div>
         <img class="risk-icon" id="risk" alt="Risk status icon">

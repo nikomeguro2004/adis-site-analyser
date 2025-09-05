@@ -1,23 +1,26 @@
+
 /* General Styling */
 body {
   font-family: 'Lora', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #FFF8F0; /* Creamy beige */
-  color: #333;
+  background: #bec2f0; 
+  color: #bec2f0;
+  display: flex;
   text-align: center;
-  width: 360px;
-  padding: 2px;
+  justify-content: center;
+  width: 380px;
+  padding: 15px;
   margin: 0;
-  border-radius: 2px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 2 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.4s ease-in-out;
 }
 
 /* Main Container */
 .container {
   background: #FFFFFF; /* White for card-like look */
-  padding: 2px;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 2 2px 8px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.3s ease-in-out;
 }
 
