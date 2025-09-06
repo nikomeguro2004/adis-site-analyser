@@ -2,9 +2,14 @@
     "manifest_version": 3,
     "name": "Site Analyser",
     "version": "2.1",
-    "description": "This extension helps analyze website safety.",
-    "permissions": ["tabs", "activeTab", "storage", "notifications", "webRequest",
-    "webRequestBlocking", "<all_urls>"],
+    "description": "Analyzes website safety by checking HTTPS usage and allows phishing reporting.",
+    "author": "xAI",
+    "homepage_url": "https://x.ai",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
     "background": {
         "service_worker": "background.js"
     },
@@ -18,9 +23,16 @@
     },
     "web_accessible_resources": [
         {
-            "resources": ["Secure.png", "Warning.png", "Danger.png"],
+            "resources": [
+                "Secure.png",
+                "Warning.png",
+                "Danger.png"
+            ],
             "matches": ["<all_urls>"]
         }
     ],
-    "options_page": "reported.html"
+    "options_page": "reported.html",
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    }
 }

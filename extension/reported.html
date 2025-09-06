@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Reported Phishing Sites</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reported Sites</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            width: 350px; 
-            padding: 20px; 
-            text-align: center; 
-            background: #1a1a1a; 
-            color: white; 
-            border-radius: 10px;
+        body {
+            width: 400px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
         }
-        ul { 
-            list-style-type: none; 
-            padding: 0; 
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
-        li { 
-            padding: 8px; 
-            border-bottom: 1px solid #555; 
-            display: flex; 
-            justify-content: space-between; 
+        ul {
+            list-style: none;
+            padding: 0;
         }
-        button { 
-            background: red; 
-            color: white; 
-            border: none; 
-            padding: 5px; 
-            cursor: pointer; 
-            border-radius: 3px;
+        li {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #dc3545;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h2>Reported Phishing Sites</h2>
+    <h1>Reported Phishing Sites</h1>
     <ul id="siteList"></ul>
     <script src="reported.js"></script>
 </body>
 </html>
-

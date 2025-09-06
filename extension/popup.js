@@ -28,16 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cache current tab URL
     let currentUrl = "";
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        if (tabs.length === 0 || !tabs[0].url || tabs[0].url.startsWith("chrome://") || tabs[0].url === "about:blank") {
-            updateUI("[Warning] No website to analyze", "warning", "Warning.png", "Please open a website");
-            chrome.runtime.sendMessage({ action: "setWarningIcon", tabId: tabs[0]?.id }, () => {
-                if (chrome.runtime.lastError) {
-                    console.error("Icon set error:", chrome.runtime.lastError);
-                }
-            });
-        } else {
+        if (tabs.length > 0 && tabs[0].url) {
             currentUrl = tabs[0].url;
             checkWebsiteRisk(currentUrl);
+        } else {
+            updateUI("[Warning] No website found", "warning", "Warning.png", "No active tab");
         }
     });
 
@@ -54,25 +49,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000); // Debounce for 1s
     });
 
-     reportBtn.addEventListener("click", function () {
-        if (!currentUrl || currentUrl.startsWith("chrome://") || currentUrl === "about:blank") {
-            updateUI("[Warning] No website to report", "warning", "Warning.png", "Please open a website");
+    reportBtn.addEventListener("click", function () {
+        if (!currentUrl) {
+            updateUI("[Warning] No website found", "warning", "Warning.png", "No active tab");
             return;
         }
-        reportBtn.disabled = true; // Disable to prevent multiple clicks
         chrome.runtime.sendMessage({ action: "reportPhishing", url: currentUrl }, (response) => {
-            reportBtn.disabled = false;
             if (chrome.runtime.lastError) {
-                console.error("Report error:", chrome.runtime.lastError.message);
+                console.error("Report error:", chrome.runtime.lastError);
                 updateUI("[Warning] Report failed", "warning", "Warning.png", "Communication error");
                 return;
             }
             if (response.status === "already_reported") {
-                updateUI("[Warning] Site already reported", "warning", "Warning.png", response.message || "");
+                updateUI("[Warning] Site already reported", "warning", "Warning.png", "");
             } else if (response.status === "success") {
-                updateUI("[Reported] Site flagged as phishing!", "warning", "Warning.png", response.message || "");
+                updateUI("[Reported] Site flagged as phishing!", "warning", "Warning.png", "");
             } else {
-                updateUI("[Warning] Report failed", "warning", "Warning.png", response.message || "Storage error");
+                updateUI("[Warning] Report failed", "warning", "Warning.png", "Storage error");
             }
         });
     });
@@ -82,13 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function checkWebsiteRisk(url) {
-        if (!url || url.startsWith("chrome://") || url === "about:blank") {
-            updateUI("[Warning] No website to analyze", "warning", "Warning.png", "Please open a website");
-            chrome.runtime.sendMessage({ action: "setWarningIcon", tabId: chrome?.tabs?.query?.active?.id }, () => {
-                if (chrome.runtime.lastError) {
-                    console.error("Icon set error:", chrome.runtime.lastError);
-                }
-            });
+        if (!url) {
+            updateUI("[Warning] No website found", "warning", "Warning.png", "No active tab");
             return;
         }
         securityInfo.textContent = "[Checking] Scanning...";
