@@ -13,6 +13,35 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             });
         });
         return true;
+    } else if (request.action === "reportPhishing") {
+        chrome.storage.local.get(["reportedSites"], (result) => {
+            let reportedSites = result.reportedSites || [];
+            if (!reportedSites.includes(request.url)) {
+                reportedSites.push(request.url);
+                chrome.storage.local.set({ reportedSites }, () => {
+                    sendResponse({ success: true });
+                    chrome.runtime.sendMessage({ action: "updateReportedSites", sites: reportedSites });
+                });
+            } else {
+                sendResponse({ success: true });
+            }
+        });
+        return true;
+    } else if (request.action === "getReportedSites") {
+        chrome.storage.local.get(["reportedSites"], (result) => {
+            sendResponse({ sites: result.reportedSites || [] });
+        });
+        return true;
+    } else if (request.action === "unmarkPhishing") {
+        chrome.storage.local.get(["reportedSites"], (result) => {
+            let reportedSites = result.reportedSites || [];
+            reportedSites = reportedSites.filter(url => url !== request.url);
+            chrome.storage.local.set({ reportedSites }, () => {
+                sendResponse({ success: true });
+                chrome.runtime.sendMessage({ action: "updateReportedSites", sites: reportedSites });
+            });
+        });
+        return true;
     }
 });
 
@@ -38,6 +67,16 @@ async function checkWebsiteRisk(url, tabId) {
         return { riskScore: 100, message: "❌ Invalid URL" };
     }
 
+    let reportedSites = await new Promise(resolve => {
+        chrome.storage.local.get(["reportedSites"], result => {
+            resolve(result.reportedSites || []);
+        });
+    });
+    if (reportedSites.includes(url)) {
+        updateIcon("icon03.png", tabId);
+        return { riskScore: 100, message: "❌ Reported as Phishing" };
+    }
+
     if (url.startsWith("http://")) {
         updateIcon("icon03.png", tabId);
         return { riskScore: 100, message: "❌ Site Unsafe, close ASAP" };
@@ -52,7 +91,7 @@ async function checkWebsiteRisk(url, tabId) {
     return { riskScore: 0, message: "✅ You're safe (for now)" };
 }
 
-// ✅ Show warning notification when a site is unsafe
+
 function showWarningNotification() {
     chrome.notifications.create({
         type: "basic",
@@ -65,10 +104,14 @@ function showWarningNotification() {
 
 async function checkSSLValidity(url) {
     try {
-        let response = await fetch(url, { method: "HEAD" });
-        return response.ok && response.url.startsWith("https://") ? 0 : 50;
-    } catch {
+        let response = await fetch(url, { method: "HEAD", redirect: "follow" });
+        if (response.ok && response.url.startsWith("https://")) {
+           return 0; 
+        }
         return 50;
+    } catch (error) {
+        console.error("SSL check error:", error.message);
+        return 50; 
     }
 }
 

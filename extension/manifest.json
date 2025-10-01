@@ -3,7 +3,7 @@
     "name": "Site Analyser",
     "version": "2.1",
     "description": "This extension helps analyze website safety.",
-    "permissions": ["tabs", "activeTab", "storage", "notifications"],
+    "permissions": ["tabs", "activeTab", "storage", "notifications","webRequest","*://*/*"],
     "background": {
         "service_worker": "background.js"
     },
