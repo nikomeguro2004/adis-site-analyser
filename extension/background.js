@@ -53,6 +53,28 @@ function extractDomain(url) {
     }
 }
 
+function checkSuspiciousKeywords(domain) {
+    const suspiciousKeywords = [
+        'free-money', 'free-money-now', 'free-cash',
+        'casino', 'online-casino', 'bet', 'gambling',
+        'download-crack', 'cracked', 'keygen', 'serial',
+        'paypal-login', 'bank-login', 'account-verify',
+        'claim-prize', 'you-won', 'lottery-winner',
+        'urgent-action', 'security-alert', 'verify-account',
+        'admin-login', 'secure-login', 'account-recovery'
+    ];
+    
+    const lowerDomain = domain.toLowerCase();
+    
+    for (const keyword of suspiciousKeywords) {
+        if (lowerDomain.includes(keyword)) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 async function checkWebsiteRisk(url, tabId) {
     if (!tabId) {
         return { riskScore: 100, message: "⚠️ Invalid tab ID" };
@@ -80,6 +102,11 @@ async function checkWebsiteRisk(url, tabId) {
     if (url.startsWith("http://")) {
         updateIcon("icon03.png", tabId);
         return { riskScore: 100, message: "❌ Site Unsafe, close ASAP" };
+    }
+
+    if (checkSuspiciousKeywords(domain)) {
+        updateIcon("icon03.png", tabId);
+        return { riskScore: 80, message: "⚠️ Suspicious domain detected" };
     }
 
     let sslRisk = await checkSSLValidity(url);
